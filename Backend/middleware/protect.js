@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken"
 import User from "../models/user.model.js"
 
-export const protect = async(req,res)=>{
+const protect = async(req,res)=>{
 
     try{
 
@@ -27,3 +27,5 @@ export const protect = async(req,res)=>{
         return res.status(500).json({message:`Server error: ${err}`})
     }
 }
+
+export default protect
